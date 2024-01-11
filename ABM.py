@@ -32,7 +32,7 @@ class individual:
         if self.age>65 or self.age<18:  #youngs and elder at home... this is a toy model!
             self.location=self.home_id
         else:
-            if time_window==1:  # 0 (from 00 to 8), 1 (from 9 to 17), 2(18 to 24)
+            if time_window==1:  # 0 (from 00 to 8am), 1 (from 9am to 5pm), 2(6pm to 12am)
                 self.location=self.work_id
             else:
                 self.location=self.home_id
@@ -57,7 +57,7 @@ N_Households = 400
 N_offices = 200
 number_of_days=120
 
-#age: to be replaced with something more realistic (couldn't be bothered)
+#age: to be replaced with something more realistic 
 age =np.random.choice(range(80), size=N, replace=True)
 households = np.random.choice(range(N_Households), size=N, replace=True)
 offices = np.random.choice(range(N_Households, N_Households+N_offices), size=N, replace=True)
